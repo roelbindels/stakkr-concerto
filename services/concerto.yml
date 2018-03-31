@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+    concerto:
+        build: ${COMPOSE_BASE_DIR}/home/app/concerto
+        image: ${COMPOSE_PROJECT_NAME}/concerto
+        container_name: ${COMPOSE_PROJECT_NAME}_concerto
+        hostname: ${COMPOSE_PROJECT_NAME}_concerto
+        networks: [stakkr]
+#        links: [mysql]
+#        volumes:
+#            - ${COMPOSE_BASE_DIR}/home/app:/home/app
